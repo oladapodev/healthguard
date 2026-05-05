@@ -5,6 +5,17 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
 ## Unreleased
 
 ### Added
+- Added [TASKS.md](TASKS.md) as the active build task plan with service/tool recommendations and sprint sequencing for lab parsing, agents, environmental context, RAG, and Doctor Notes.
+- Added typed lab upload and marker extraction contracts:
+  - [app/schemas/lab.py](/home/dev/Desktop/healthguard/app/schemas/lab.py)
+  - [app/models/lab_result.py](/home/dev/Desktop/healthguard/app/models/lab_result.py)
+  - [app/services/parsing.py](/home/dev/Desktop/healthguard/app/services/parsing.py)
+  - [app/api/v1/labs.py](/home/dev/Desktop/healthguard/app/api/v1/labs.py)
+- Added first agent workflow state scaffolding:
+  - [app/agents/state.py](/home/dev/Desktop/healthguard/app/agents/state.py)
+  - [app/agents/graphs/lab_analysis.py](/home/dev/Desktop/healthguard/app/agents/graphs/lab_analysis.py)
+- Added generic OpenAPI frontend API client generation via [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py).
+- Added lab upload endpoint contract tests in [app/tests/test_labs.py](/home/dev/Desktop/healthguard/app/tests/test_labs.py).
 - Added [PRD.md](PRD.md) as the product source of truth for HealthGuard AI goals, concrete feature scope, safety posture, clinician-bridge output, and reputable research basis.
 - Added [web/src/lib/theme.ts](web/src/lib/theme.ts) with palette tokens, semantic color map, and utility class examples.
 - Expanded [AGENTS.md](/AGENTS.md) into a detailed implementation checklist for backend and frontend file-by-file work.
@@ -34,6 +45,9 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
   - [web/src/components/index.ts](/home/dev/Desktop/healthguard/web/src/components/index.ts)
 
 ### Changed
+- Updated `make gen` to generate a broader OpenAPI TypeScript client instead of only the hello endpoint.
+- Updated the generated hello page to consume [web/src/lib/generated/api-client.generated.ts](/home/dev/Desktop/healthguard/web/src/lib/generated/api-client.generated.ts).
+- Kept [scripts/generate_hello_frontend.py](/home/dev/Desktop/healthguard/scripts/generate_hello_frontend.py) as a compatibility wrapper around the new generic generator.
 - Updated [AGENTS.md](AGENTS.md) update protocol so product-scope changes must also update [PRD.md](PRD.md).
 - Theme source of truth now includes direct guidance for `#0F766E`, `#10B981`, `#F8FAFC`, `#64748B`, `#F59E0B`, and `#EF4444` across tokens and docs.
 - Updated `AGENTS.md` to document the locked Makefile contract and changelog sync requirements.

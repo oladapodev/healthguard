@@ -42,7 +42,7 @@ backend:
 	$(MAKE) install-backend
 
 gen:
-	@PYTHONPATH=. UV_CACHE_DIR=$(UV_CACHE_DIR) $(BACKEND_BIN) run python scripts/generate_hello_frontend.py
+	@PYTHONPATH=. UV_CACHE_DIR=$(UV_CACHE_DIR) $(BACKEND_BIN) run python scripts/generate_api_client.py
 
 lint:
 	UV_CACHE_DIR=$(UV_CACHE_DIR) $(BACKEND_BIN) run ruff check app app/tests

@@ -11,6 +11,8 @@ Product intent, user-facing scope, safety posture, clinical-bridge behavior, and
 
 This file remains the implementation source of truth for stack, architecture, file structure, command contracts, checklists, and change-log protocol. Any implementation work must preserve the product direction in `PRD.md`.
 
+Active sprint tasks, service recommendations, and execution order live in [TASKS.md](/home/dev/Desktop/healthguard/TASKS.md).
+
 ## 1) Mission
 
 HealthGuard AI is a patient-first, multi-agent AI system that turns lab data and contextual signals into:
@@ -169,6 +171,7 @@ Core files:
 ### Observability, tests, quality
 - [ ] [app/tests/__init__.py](/home/dev/Desktop/healthguard/app/tests/__init__.py) and test suite expansion
 - [x] [app/tests/test_hello.py](/home/dev/Desktop/healthguard/app/tests/test_hello.py)
+- [x] [app/tests/test_labs.py](/home/dev/Desktop/healthguard/app/tests/test_labs.py)
 - [ ] Unit and integration tests for all API routes
 - [ ] End-to-end safety guardrail tests for note and risk language
 
@@ -210,7 +213,10 @@ Core files:
 ### Tooling and code generation
 - [x] [Makefile](/home/dev/Desktop/healthguard/Makefile)
 - [x] [scripts/generate_hello_frontend.py](/home/dev/Desktop/healthguard/scripts/generate_hello_frontend.py)
+- [x] [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py)
+- [x] [TASKS.md](/home/dev/Desktop/healthguard/TASKS.md)
 - [x] [web/src/lib/generated/hello-api.generated.ts](/home/dev/Desktop/healthguard/web/src/lib/generated/hello-api.generated.ts)
+- [x] [web/src/lib/generated/api-client.generated.ts](/home/dev/Desktop/healthguard/web/src/lib/generated/api-client.generated.ts)
 
 ### Feature pages
 - [x] [web/src/pages](/home/dev/Desktop/healthguard/web/src/pages) folder implementation
@@ -275,6 +281,7 @@ If these commands are changed, `AGENTS.md` and `CHANGELOG.md` must be updated in
 ## 10) Change Log
 
 - `2026-05-05` — Added [PRD.md](/home/dev/Desktop/healthguard/PRD.md) as the product source of truth for HealthGuard AI goals, features, safety posture, clinician-bridge output, and reputable research basis.
+- `2026-05-05` — Added [TASKS.md](/home/dev/Desktop/healthguard/TASKS.md) as the active sprint/task source, started the lab upload and parsing spine, and introduced generic OpenAPI TypeScript client generation via [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py).
 - `2026-05-05` — Updated hello page with theme-aware controls: added `ThemeToggle`, retry request button, and current-theme indicator in [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx).
 - `2026-05-05` — Initial locked source document created.
 - `2026-05-05` — Frontend scaffold replaced in `web/` with Vite + Untitled UI foundation and theme provider routing utilities.

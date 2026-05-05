@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Button } from '@/components/base/buttons/button'
 import { cardTokens, statusToneClass, utilityClassExamples, utilityStyleExamples } from '@/lib/theme'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { fetchHelloWorld, type HelloWorldResponse } from '@/lib/generated/hello-api.generated'
+import { helloWorldApiV1HelloGet, type HelloWorldResponse } from '@/lib/generated/api-client.generated'
 import { useTheme } from '@/providers/theme-provider'
 
 type HelloStatusTone = 'normal' | 'attention' | 'urgent'
@@ -22,7 +22,7 @@ export function HelloWorldPage() {
     setError(null)
 
     try {
-      const value = await fetchHelloWorld()
+      const value = await helloWorldApiV1HelloGet()
       setPayload(value)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unable to load hello endpoint')
