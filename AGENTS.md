@@ -197,6 +197,7 @@ Core files:
 - [x] [web/src/components/base/badges/badge.tsx](/home/dev/Desktop/healthguard/web/src/components/base/badges/badge.tsx)
 - [x] [web/src/components/base/cards/card.tsx](/home/dev/Desktop/healthguard/web/src/components/base/cards/card.tsx)
 - [x] [web/src/components/base/empty-state/empty-state.tsx](/home/dev/Desktop/healthguard/web/src/components/base/empty-state/empty-state.tsx)
+- [x] [web/src/components/base/file-upload/file-upload.tsx](/home/dev/Desktop/healthguard/web/src/components/base/file-upload/file-upload.tsx)
 - [x] [web/src/components/base/metrics/metric-card.tsx](/home/dev/Desktop/healthguard/web/src/components/base/metrics/metric-card.tsx)
 - [x] [web/src/components/base/typography/section-title.tsx](/home/dev/Desktop/healthguard/web/src/components/base/typography/section-title.tsx)
 - [x] [web/src/components/index.ts](/home/dev/Desktop/healthguard/web/src/components/index.ts)
@@ -284,6 +285,7 @@ If these commands are changed, `AGENTS.md` and `CHANGELOG.md` must be updated in
 - `2026-05-05` — Added [PRD.md](/home/dev/Desktop/healthguard/PRD.md) as the product source of truth for HealthGuard AI goals, features, safety posture, clinician-bridge output, and reputable research basis.
 - `2026-05-05` — Added [TASKS.md](/home/dev/Desktop/healthguard/TASKS.md) as the active sprint/task source, started the lab upload and parsing spine, and introduced generic OpenAPI TypeScript client generation via [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py).
 - `2026-05-05` — Added frontend lab upload intake page at [web/src/pages/LabUploadPage.tsx](/home/dev/Desktop/healthguard/web/src/pages/LabUploadPage.tsx) and made it the root route.
+- `2026-05-05` — Reworked lab intake into a richer onboarding flow using the Untitled-style [web/src/components/base/file-upload/file-upload.tsx](/home/dev/Desktop/healthguard/web/src/components/base/file-upload/file-upload.tsx) component.
 - `2026-05-05` — Updated hello page with theme-aware controls: added `ThemeToggle`, retry request button, and current-theme indicator in [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx).
 - `2026-05-05` — Initial locked source document created.
 - `2026-05-05` — Frontend scaffold replaced in `web/` with Vite + Untitled UI foundation and theme provider routing utilities.
