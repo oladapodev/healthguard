@@ -46,7 +46,7 @@ export const semanticPalette = {
 } as const
 
 export const utilityClassExamples = {
-  appShell: 'min-h-screen px-4 py-6',
+  appShell: 'min-h-screen bg-[var(--color-bg-primary)] px-4 py-6 text-[var(--color-text-primary)]',
   card: 'rounded-2xl border border-[var(--color-border-primary)] bg-[var(--color-bg-tertiary)] p-4 shadow-sm',
   sectionTitle: 'text-[1.1rem] font-semibold leading-tight tracking-tight',
   panelMuted: 'rounded-xl border border-[var(--color-border-secondary)] bg-[var(--color-bg-tertiary)] px-4 py-3',
