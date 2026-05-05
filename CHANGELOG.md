@@ -16,6 +16,8 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
   - [app/agents/graphs/lab_analysis.py](/home/dev/Desktop/healthguard/app/agents/graphs/lab_analysis.py)
 - Added generic OpenAPI frontend API client generation via [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py).
 - Added lab upload endpoint contract tests in [app/tests/test_labs.py](/home/dev/Desktop/healthguard/app/tests/test_labs.py).
+- Added frontend lab upload intake page using the generated OpenAPI client:
+  - [web/src/pages/LabUploadPage.tsx](/home/dev/Desktop/healthguard/web/src/pages/LabUploadPage.tsx)
 - Added [PRD.md](PRD.md) as the product source of truth for HealthGuard AI goals, concrete feature scope, safety posture, clinician-bridge output, and reputable research basis.
 - Added [web/src/lib/theme.ts](web/src/lib/theme.ts) with palette tokens, semantic color map, and utility class examples.
 - Expanded [AGENTS.md](/AGENTS.md) into a detailed implementation checklist for backend and frontend file-by-file work.
@@ -47,6 +49,7 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
 ### Changed
 - Updated `make gen` to generate a broader OpenAPI TypeScript client instead of only the hello endpoint.
 - Updated the generated hello page to consume [web/src/lib/generated/api-client.generated.ts](/home/dev/Desktop/healthguard/web/src/lib/generated/api-client.generated.ts).
+- Updated [web/src/App.tsx](/home/dev/Desktop/healthguard/web/src/App.tsx) so `/` opens the lab upload intake flow and `/hello` keeps the backend connectivity page.
 - Kept [scripts/generate_hello_frontend.py](/home/dev/Desktop/healthguard/scripts/generate_hello_frontend.py) as a compatibility wrapper around the new generic generator.
 - Updated [AGENTS.md](AGENTS.md) update protocol so product-scope changes must also update [PRD.md](PRD.md).
 - Theme source of truth now includes direct guidance for `#0F766E`, `#10B981`, `#F8FAFC`, `#64748B`, `#F59E0B`, and `#EF4444` across tokens and docs.

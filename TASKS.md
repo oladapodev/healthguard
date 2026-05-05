@@ -40,8 +40,8 @@ Start with the lab upload and parsing spine. Every later feature depends on reli
 - [ ] Store uploaded lab metadata in PostgreSQL.
 - [ ] Store extracted markers in PostgreSQL.
 - [ ] Add real Docling extraction implementation for PDFs/images.
-- [ ] Add frontend lab upload page.
-- [ ] Generate frontend client and wire upload page to backend.
+- [x] Add frontend lab upload page.
+- [x] Generate frontend client and wire upload page to backend.
 
 ## 4. Sprint 2: First Multi-Agent Analysis Flow
 

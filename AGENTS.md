@@ -221,6 +221,7 @@ Core files:
 ### Feature pages
 - [x] [web/src/pages](/home/dev/Desktop/healthguard/web/src/pages) folder implementation
 - [x] [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx)
+- [x] [web/src/pages/LabUploadPage.tsx](/home/dev/Desktop/healthguard/web/src/pages/LabUploadPage.tsx)
 - [x] Home-style landing route cleanup and hello-only experience in [web/src/App.tsx](/home/dev/Desktop/healthguard/web/src/App.tsx)
 - [ ] Home page experience (expanded product flow)
 - [ ] Profile and context capture
@@ -282,6 +283,7 @@ If these commands are changed, `AGENTS.md` and `CHANGELOG.md` must be updated in
 
 - `2026-05-05` — Added [PRD.md](/home/dev/Desktop/healthguard/PRD.md) as the product source of truth for HealthGuard AI goals, features, safety posture, clinician-bridge output, and reputable research basis.
 - `2026-05-05` — Added [TASKS.md](/home/dev/Desktop/healthguard/TASKS.md) as the active sprint/task source, started the lab upload and parsing spine, and introduced generic OpenAPI TypeScript client generation via [scripts/generate_api_client.py](/home/dev/Desktop/healthguard/scripts/generate_api_client.py).
+- `2026-05-05` — Added frontend lab upload intake page at [web/src/pages/LabUploadPage.tsx](/home/dev/Desktop/healthguard/web/src/pages/LabUploadPage.tsx) and made it the root route.
 - `2026-05-05` — Updated hello page with theme-aware controls: added `ThemeToggle`, retry request button, and current-theme indicator in [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx).
 - `2026-05-05` — Initial locked source document created.
 - `2026-05-05` — Frontend scaffold replaced in `web/` with Vite + Untitled UI foundation and theme provider routing utilities.
