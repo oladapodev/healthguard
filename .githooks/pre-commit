@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+set -eu
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+# Detect changed files in the staged area
+STAGED=$(git diff --cached --name-only --diff-filter=ACMRTUB | sed '/^$/d')
+
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+# Ignore non-source documentation-only and hook/config updates
+NON_SOURCE=$(printf '%s
+' "$STAGED" | grep -Ev '(^|/)AGENTS\.md$|(^|/)CHANGELOG\.md$|\.md$') || true
+
+if [ -n "$NON_SOURCE" ] && ! printf '%s
+' "$STAGED" | grep -q '^AGENTS\.md$'; then
+  echo "
+⚠️  Reminder: AGENTS.md is required for this commit."
+  echo "Reason: Source-of-truth and changelog drift guard is enabled."
+  echo "Please include AGENTS.md in this commit (and update the changelog section)."
+  echo "To proceed in exceptional cases, use --no-verify."
+  exit 1
+fi

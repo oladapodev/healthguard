@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.env
+.web_cache/
+web/node_modules/
+web/dist/
+web/.vite/
+coverage/
+.ruff_cache/
+
+# keep lockfile
+# uv.lock
