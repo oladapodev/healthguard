@@ -5,6 +5,12 @@
 **Purpose:** Canonical implementation source and decision log
 **Status:** Active and binding for all future changes
 
+## 0) Product Source of Truth
+
+Product intent, user-facing scope, safety posture, clinical-bridge behavior, and research grounding live in [PRD.md](/home/dev/Desktop/healthguard/PRD.md).
+
+This file remains the implementation source of truth for stack, architecture, file structure, command contracts, checklists, and change-log protocol. Any implementation work must preserve the product direction in `PRD.md`.
+
 ## 1) Mission
 
 HealthGuard AI is a patient-first, multi-agent AI system that turns lab data and contextual signals into:
@@ -240,8 +246,9 @@ Before each commit that changes architecture, stack choice, folder structure, be
 
 1. Update this `AGENTS.md` first.
 2. Add a changelog entry under the next version/date.
-3. Update affected code files.
-4. Ensure changelog and checklists remain truthful.
+3. Update `PRD.md` if product scope, safety posture, user flows, clinical behavior, research grounding, or feature requirements changed.
+4. Update affected code files.
+5. Ensure changelog, PRD, and implementation checklists remain truthful.
 
 A repo-level reminder hook is installed via `.githooks/pre-commit` and `make setup-git-hooks`.
 
@@ -267,6 +274,7 @@ If these commands are changed, `AGENTS.md` and `CHANGELOG.md` must be updated in
 
 ## 10) Change Log
 
+- `2026-05-05` — Added [PRD.md](/home/dev/Desktop/healthguard/PRD.md) as the product source of truth for HealthGuard AI goals, features, safety posture, clinician-bridge output, and reputable research basis.
 - `2026-05-05` — Updated hello page with theme-aware controls: added `ThemeToggle`, retry request button, and current-theme indicator in [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx).
 - `2026-05-05` — Initial locked source document created.
 - `2026-05-05` — Frontend scaffold replaced in `web/` with Vite + Untitled UI foundation and theme provider routing utilities.

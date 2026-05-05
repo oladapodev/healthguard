@@ -5,6 +5,7 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
 ## Unreleased
 
 ### Added
+- Added [PRD.md](PRD.md) as the product source of truth for HealthGuard AI goals, concrete feature scope, safety posture, clinician-bridge output, and reputable research basis.
 - Added [web/src/lib/theme.ts](web/src/lib/theme.ts) with palette tokens, semantic color map, and utility class examples.
 - Expanded [AGENTS.md](/AGENTS.md) into a detailed implementation checklist for backend and frontend file-by-file work.
 - Added changelog workflow (`CHANGELOG.md`) and repository pre-commit reminder mechanism.
@@ -33,6 +34,7 @@ All notable project changes should be recorded here and mirrored in AGENTS updat
   - [web/src/components/index.ts](/home/dev/Desktop/healthguard/web/src/components/index.ts)
 
 ### Changed
+- Updated [AGENTS.md](AGENTS.md) update protocol so product-scope changes must also update [PRD.md](PRD.md).
 - Theme source of truth now includes direct guidance for `#0F766E`, `#10B981`, `#F8FAFC`, `#64748B`, `#F59E0B`, and `#EF4444` across tokens and docs.
 - Updated `AGENTS.md` to document the locked Makefile contract and changelog sync requirements.
 - Updated [web/src/pages/HelloWorldPage.generated.tsx](/home/dev/Desktop/healthguard/web/src/pages/HelloWorldPage.generated.tsx) to add theme toggling and a retry request action using theme-aware styling.
